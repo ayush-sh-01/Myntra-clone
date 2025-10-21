@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra - Online Shopping</title>
+    <link rel="icon" href="https://aartisto.com/wp-content/uploads/2020/11/myntra.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        <h1>⚡ BIG SALE NOW LIVE! Get 40% OFF on all products 🎉 | Free Shipping on Orders Above ₹500</h1>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6mUEIoq3UUDmgCEHRvIn72bcQ63JIZ8eH1A&s" alt="Myntra Logo">
+            </div>
+
+            <div class="nav-menu">
+                <a href="#men">MEN</a>
+                <a href="#women">WOMEN</a>
+                <a href="#kids">KIDS</a>
+                <a href="#home">HOME & LIVING</a>
+                <a href="#beauty">BEAUTY</a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search for products, brands and more...">
+            </div>
+
+            <div class="nav-icons">
+                <a href="#profile" class="icon-link" onclick="openProfile()">
+                    <span class="icon-symbol">👤</span>
+                    <span>Profile</span>
+                </a>
+                <a href="#wishlist" class="icon-link">
+                    <span class="icon-symbol">❤️</span>
+                    <span>Wishlist</span>
+                    <span class="badge" id="wishlistBadge" style="display:none;">0</span>
+                </a>
+                <a href="#bag" class="icon-link" onclick="toggleCart()">
+                    <span class="icon-symbol">🛍️</span>
+                    <span>Bag</span>
+                    <span class="badge" id="cartBadge" style="display:none;">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="filter-title">FILTER BY CATEGORY</div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+            <button class="filter-btn" onclick="filterProducts('shirts')">Shirts</button>
+            <button class="filter-btn" onclick="filterProducts('shoes')">Shoes</button>
+            <button class="filter-btn" onclick="filterProducts('dresses')">Dresses</button>
+            <button class="filter-btn" onclick="filterProducts('accessories')">Accessories</button>
+            <button class="filter-btn" onclick="filterProducts('watches')">Watches</button>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="hero-section">
+        <div class="products-container">
+            <h2 class="section-title">✨ Featured Collections</h2>
+            <p class="section-subtitle">Discover our trending & bestselling products</p>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <span class="close" onclick="toggleCart()">&times;</span>
+        <h2>Your Bag</h2>
+        <div id="cartItems">
+            <div class="cart-empty">Your bag is empty</div>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProfile()">&times;</span>
+            <h2>User Profile</h2>
+            <input type="text" placeholder="Full Name" id="userName">
+            <input type="email" placeholder="Email Address" id="userEmail">
+            <input type="tel" placeholder="Phone Number" id="userPhone">
+            <button class="btn-submit" onclick="saveProfile()">Save Profile</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>COMPANY</h4>
+                <a href="#about">About Us</a>
+                <a href="#careers">Careers</a>
+                <a href="#blog">Blog</a>
+                <a href="#press">Press</a>
+            </div>
+            <div class="footer-section">
+                <h4>CUSTOMER CARE</h4>
+                <a href="#help">Help Center</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#returns">Returns & Exchange</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h4>POLICIES</h4>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#shipping">Shipping Policy</a>
+                <a href="#sitemap">Sitemap</a>
+            </div>
+            <div class="footer-section">
+                <h4>FOLLOW US</h4>
+                <a href="#facebook">Facebook</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#instagram">Instagram</a>
+                <a href="#youtube">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Myntra Clone. All rights reserved. | Built with ❤️ using HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button>
+
+    <script src="index.js">
+    </script>
